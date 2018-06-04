@@ -28,11 +28,6 @@ public class ManejadorCita {
         lista.remove(c);
     }
     
-    public void editar(Cita c){
-        lista.replace();
-        
-    }
-    
     public ArrayList<Cita> listar(){
         return this.lista;
     }
