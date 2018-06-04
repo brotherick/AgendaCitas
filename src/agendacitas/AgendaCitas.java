@@ -30,7 +30,12 @@ public class AgendaCitas {
             System.out.println("ELIMINAR = 3");
             System.out.println("MOSTRAR = 4");
             System.out.println("SALIR = 5");
-            opcion = Integer.parseInt(br.readLine());
+            
+            try{
+                opcion = Integer.parseInt(br.readLine());
+            } catch (IOException | NumberFormatException e) {
+                System.out.println("Solo puedes ingresar numeros");
+            }
             switch(opcion){
                 case 1:
                     Cita nueva = new Cita();
@@ -76,6 +81,7 @@ public class AgendaCitas {
                     }
                     break;                  
             }
+
         }while(opcion != 5);
     }
     
